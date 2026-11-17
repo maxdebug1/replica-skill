@@ -199,11 +199,47 @@ replica-entrepreneur/  SKILL.md, reviews.py, themes.json
 replica-brand/         SKILL.md, sweep.py
 replica-launch/        SKILL.md, listing.py, listing.example.json
 replica-deploy/        SKILL.md, preflight.md
+skills/claude-youtube/ SKILL.md, sub-skills/ (14), references/ (9), templates/ (9), execution/ (6 tools)
 tests/                 the tests for every tool
 ```
 
 Your own files live in `replica/` in your project. The skills read each
 other's.
+
+## Also in this repo: claude-youtube
+
+A separate skill, in `skills/claude-youtube/`: a YouTube growth strategist.
+One `/claude-youtube` command routes to 14 workflows: audit, seo, script,
+hook, thumbnail, strategy, calendar, shorts, analyze, repurpose, monetize,
+competitor, metadata and ideate. It reads nine reference guides and nine
+channel-type templates, and holds itself to the same rule as the
+Entrepreneur: it never invents a number. Every figure carries a tag saying
+where it came from.
+
+```
+/plugin install claude-youtube@replica-skill
+```
+
+Or copy the folder: `cp -r replica-skill/skills/claude-youtube ~/.claude/skills/`.
+
+It works from what you paste (Studio screenshots, CSV exports, links). For
+live data, its tools in `execution/` talk to the official YouTube APIs, so
+unlike the Replica tools they do touch the network and need your own keys:
+
+```bash
+export YOUTUBE_API_KEY=...                                  # public data
+python3 skills/claude-youtube/execution/fetch_channel_data.py @handle --markdown        # 3 units
+python3 skills/claude-youtube/execution/search_competitor_videos.py "topic" --dry-run   # 102 units
+python3 skills/claude-youtube/execution/utils/youtube_auth.py --login                   # OAuth, your channel
+python3 skills/claude-youtube/execution/fetch_video_analytics.py overview --days 28
+python3 skills/claude-youtube/execution/fetch_transcript.py URL --format timed          # needs yt-dlp
+python3 skills/claude-youtube/execution/utils/quota_tracker.py                          # units left today
+```
+
+Still standard-library Python, nothing to pip install (yt-dlp is optional, for
+transcripts). OAuth scopes are read-only: nothing here can upload, edit or
+delete. A local quota tracker refuses any call that would go over the Data
+API's 10,000 units a day.
 
 ## Credit
 

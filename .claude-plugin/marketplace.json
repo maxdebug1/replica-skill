@@ -13,6 +13,13 @@
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/Jakeschincariol/replica-skill"
+    },
+    {
+      "name": "claude-youtube",
+      "description": "A YouTube growth strategist: channel audits, SEO, retention scripts, hooks, thumbnails, strategy, calendars, Shorts, analytics, repurposing, monetization, competitor research, metadata and ideas. 14 workflows, sourced references, optional live data from the YouTube APIs.",
+      "source": "./skills",
+      "category": "productivity",
+      "homepage": "https://github.com/Jakeschincariol/replica-skill"
     }
   ]
 }

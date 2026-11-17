@@ -1,0 +1,21 @@
+{
+  "name": "claude-youtube",
+  "description": "A YouTube growth strategist in one skill: 14 workflows from channel audits to monetization, grounded in sourced references and, optionally, live YouTube API data. Never invents a statistic.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jake Schincariol",
+    "url": "https://opusjake.ai"
+  },
+  "homepage": "https://github.com/Jakeschincariol/replica-skill",
+  "repository": "https://github.com/Jakeschincariol/replica-skill",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-skills",
+    "youtube",
+    "youtube-seo",
+    "content-strategy",
+    "creator"
+  ],
+  "skills": "./"
+}
