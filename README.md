@@ -1,6 +1,6 @@
 # The Replica skill
 
-Eleven Claude skills that clone any app. Free, MIT, no signup, no API key,
+Twelve Claude skills that clone any app. Free, MIT, no signup, no API key,
 nothing to connect.
 
 One reverse-engineers the app you want to clone. One rebuilds it. One tests it
@@ -10,7 +10,8 @@ fixes it in yours, so you have an app you can sell.
 In between, the others plan the stack and the database, rebuild the design
 system, wire up auth and payments, score your clone against the original, give
 it a name and a brand of its own, write the landing page and the store
-listing, and put it live on your domain.
+listing, put it live on your domain, and plan the content that brings
+customers to it.
 
 **It rebuilds what an app does, never what it owns.** Features and flows,
 clean-room style. Not its code, its logo, its copy or its content. The
@@ -49,7 +50,7 @@ method works.
 
 The tools need Python 3.8 or newer. Nothing to pip install.
 
-## The eleven
+## The twelve
 
 | command | what it does |
 | --- | --- |
@@ -64,6 +65,7 @@ The tools need Python 3.8 or newer. Nothing to pip install.
 | `/replica-brand` | Names and rebrands your version so it is yours. |
 | `/replica-launch` | Landing page, pricing and App Store listing. |
 | `/replica-deploy` | Ships it live on your own domain. |
+| `/replica-content` | Plans the content that brings customers: pillars from your fixes, scored ideas, a calendar and distribution. |
 
 ## How to use it
 
@@ -71,7 +73,7 @@ Run them in order. Each one reads what the last one wrote, in a `replica/`
 folder in your project.
 
 ```
-recon -> architect -> design -> build -> backend -> test -> diff -> entrepreneur -> brand -> launch -> deploy
+recon -> architect -> design -> build -> backend -> test -> diff -> entrepreneur -> brand -> launch -> deploy -> content
 ```
 
 An example: cloning a scheduling app, the kind where you share a link and
@@ -112,13 +114,17 @@ people book a time with you.
 11. **`/replica-deploy`** runs the preflight (tests, parity, sweep, listing),
     sets up production, gives you the DNS records for your domain, and ships
     it when you say go.
+12. **`/replica-content`** builds four pillars from the fixes and the angle
+    (fewer no-shows, time zones, fair pricing, small teams), scores every
+    idea on the evidence in `feedback.md`, cuts the ones with nothing new to
+    say, and plans a 60/30/10 calendar with a distribution plan per piece.
 
 You can also run any one on its own. `/replica-entrepreneur` on an app you
 are only thinking about cloning is a good way to find out if you should.
 
 ## The tools
 
-Six of them, all standard-library Python. None touch the network.
+Seven of them, all standard-library Python. None touch the network.
 
 ```bash
 python3 replica-diff/imgdiff.py original.png clone.png --out diff.png   # layout diff, ignores colour
@@ -127,6 +133,7 @@ python3 replica-entrepreneur/reviews.py replica/reviews.csv             # what u
 python3 replica-design/contrast.py replica/design/tokens.json           # WCAG contrast on your tokens
 python3 replica-brand/sweep.py . --avoid "Original App"                 # anything of the original left?
 python3 replica-launch/listing.py replica/launch/listing.json           # store limits + copycat checks
+python3 replica-content/plan.py replica/content/plan.csv                # score, rank and gate content ideas
 ```
 
 **`imgdiff.py`** reads PNGs with no libraries, turns both screenshots into
@@ -148,6 +155,11 @@ deploy until it is clean.
 **`listing.py`** checks App Store and Google Play limits, ranking claims in
 the title, wasted keyword characters, and the original's name anywhere in
 your listing.
+
+**`plan.py`** scores content ideas on customer impact, fit, search and
+effort, ranks them, checks the 60/30/10 split, and fails any searchable
+piece with nothing new to say, any high-impact claim with no evidence, and
+the original's name without a legal check.
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -199,6 +211,7 @@ replica-entrepreneur/  SKILL.md, reviews.py, themes.json
 replica-brand/         SKILL.md, sweep.py
 replica-launch/        SKILL.md, listing.py, listing.example.json
 replica-deploy/        SKILL.md, preflight.md
+replica-content/       SKILL.md, plan.py, plan.example.csv
 tests/                 the tests for every tool
 ```
 
