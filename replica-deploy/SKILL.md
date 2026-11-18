@@ -101,4 +101,4 @@ for Google). Beta first, then review with the listing from replica-launch.
 
 `replica/deploy.md` with every check and its result, the live URL, the DNS
 records set, and what to watch in the first week. The clone is now an app
-with your name on it.
+with your name on it. Next: `/replica-content`.

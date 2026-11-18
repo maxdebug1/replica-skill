@@ -1,0 +1,12 @@
+title,kind,type,pillar,stage,keyword,volume,impact,fit,search,effort,gain,evidence,legal
+How to cut no-shows with text reminders,searchable,how-to,fewer no-shows,awareness,reduce appointment no-shows,unknown,9,9,7,7,Our own before and after numbers from beta users with text reminders on,replica/feedback.md#no-text-reminders,
+Booking links for tutors,searchable,use-case,booking for small teams,consideration,booking link for tutors,unknown,7,9,5,8,A ready-made tutor setup: session lengths and buffers you can copy in one click,replica/feedback.md#not-built-for-small-teams,
+Scheduling across time zones without confusion: the full guide,searchable,hub,time zones without confusion,awareness,scheduling across time zones,unknown,8,8,7,4,Screenshots of the confirm step and the five time zone mistakes guests make most,replica/feedback.md#time-zone-confusion,
+Free meeting time zone converter,searchable,free tool,time zones without confusion,implementation,meeting time zone converter,unknown,6,7,8,5,A converter that also checks daylight saving for the date you pick,,
+Scheduling app pricing compared,searchable,comparison,fair scheduling pricing,decision,scheduling app pricing,unknown,8,9,6,6,One dated table of public prices per seat at 1 5 and 20 users,replica/launch/pricing.md,
+Booking links for small teams: setup in 10 minutes,searchable,tutorial,booking for small teams,implementation,team booking link setup,unknown,6,10,4,8,The exact setup we run ourselves with real screenshots,,
+Scheduling stats: no-shows and booking habits,searchable,stats page,fewer no-shows,awareness,appointment no-show statistics,unknown,5,6,7,6,Every stat sourced and dated in one place and kept fresh each quarter,,
+What 140 reviews of scheduling apps say,shareable,original data,fair scheduling pricing,,,,8,8,3,6,,replica/feedback.md,
+Why we refuse per-seat pricing,shareable,thought leadership,fair scheduling pricing,,,,7,9,2,8,,replica/feedback.md#per-seat-price-jumps,
+Building a booking app in six weeks,shareable,build in public,booking for small teams,,,,4,6,2,7,,,
+A 60 second no-show calculator for your socials,experimental,short video,fewer no-shows,,,,4,6,3,7,,,

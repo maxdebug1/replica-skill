@@ -1,6 +1,6 @@
 {
   "name": "replica-skill",
-  "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+  "description": "Twelve free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
   "version": "1.0.0",
   "author": {
     "name": "Jake Schincariol",
